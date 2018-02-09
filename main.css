@@ -148,4 +148,58 @@ li {
 .brands > ul > li{
 	margin-right: 60px;
 }
-
+footer {
+	background-color: #1d3356;
+	padding: 40px 0;
+}
+.footer-content-right, .footer-content-mid, .footer-content-left{
+	width: 25%;
+    position: relative;
+    padding: 15px;
+    padding-top: 10px;
+    min-height: 1px;
+    overflow: hidden;
+    height: 100%;
+    display: inline-block;
+}
+.footer-content-main{
+	min-width: 300px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+h3, h4, .footer-phone{
+	color: #fff;
+}
+.footer-phone{
+	font-size: 18px;
+}
+.h3 {
+	width: 100%;
+	text-align: center;
+}
+.hr-soc{
+	width: 145px;
+}
+.svg{
+	display: block;
+	width: 28px;
+	height: 28px;
+	background-image: url(images/sprite.svg);
+	background-repeat: no-repeat;
+	margin-top: 10px;
+}
+.fb {
+	background-position: -151px -845px;
+}
+.yt {
+	background-position: -31px -845px;
+}
+.vk {
+	background-position: -241px -845px;
+}
+.tw {
+	background-position: -361px -845px;
+}
+.in {
+	background-position: -541px -845px;
+}
