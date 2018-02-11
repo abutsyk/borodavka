@@ -106,7 +106,7 @@ li {
 	margin-left: 265px;
 }
 .header-top{
-	position: fixed;
+	/*position: fixed;*/
 	z-index: 9999;
 	background-color: #fff;
 	width: 100%;
@@ -139,14 +139,31 @@ li {
 .brands h1{
 	text-align: center;
 	margin-bottom: 15px;
+	text-decoration: underline;
 }
 .brands{
 	width: 1000px;
-	height: 250px;
-	margin-left: 250px;
+	height: 225px;
+	margin-left: 200px;
+
 }
 .brands > ul > li{
 	margin-right: 60px;
+}
+.group{
+    width: 1000px;
+    height: auto;
+    margin-left: 200px;
+	margin-bottom: 30px;
+}
+.group h1{
+    text-align: center;
+    margin-bottom: 20px;
+	text-decoration: underline;
+}
+.group .text{
+	margin: 20px 0;
+	text-align: center;
 }
 footer {
 	background-color: #1d3356;
@@ -194,12 +211,14 @@ h3, h4, .footer-phone{
 .yt {
 	background-position: -31px -845px;
 }
-.vk {
-	background-position: -241px -845px;
-}
 .tw {
 	background-position: -361px -845px;
 }
 .in {
 	background-position: -541px -845px;
+}
+.web-pool{
+	text-align: center;
+	color: #fff;
+	margin: 10px 0 -25px 0px;
 }
