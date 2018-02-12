@@ -1,6 +1,7 @@
 * {
 	margin:0;
 	padding: 0;
+	box-sizing: border-box;
 }
 body {
     font-family: PT Sans, Arial, sans-serif;
@@ -12,9 +13,9 @@ body {
 	height: 128px;
 	float: left;
 }
-.header-content{
+.header-content, .footer-content-main, .main-content{
 	min-width: 300px;
-	max-width: 1000px;
+	width: 80%;
 	margin: 0 auto;
 }
 ul {
@@ -38,14 +39,10 @@ a {
 li {
 	list-style: none;
 	float: left;
-	margin-right: 10px;
-}
-.top-menu-wrap{
-	margin-left: 120px;
 }
 .top-menu-phone{
-	margin: 0 0 0 280px;
-	max-width: 890px;
+	width: 70%;
+	margin-left: 280px;
 }
 .left-menu {
 	font-size: 19px;
@@ -85,18 +82,15 @@ li {
 .phone {
 	font-size: 28px;
 	margin: 5px 5px;
-}
-.top-menu-phone{
-	margin-left: 465px;
-}
-.logo-image{
-	margin-left: 180px;
+	padding-top: 25px;
+	width: 100%;
 }
 .email a{
 	font-size: 20px;
 	margin: 10px 200px -10px 0;
 	text-align: center;
 	color: #172c7a;
+	width: 100%;
 }
 .vert-line {
 	color:#1d3356;
@@ -109,7 +103,8 @@ li {
 	/*position: fixed;*/
 	z-index: 9999;
 	background-color: #fff;
-	width: 100%;
+	width: 80%;
+	margin: 0 auto;
 }
 .header-top-wrap{
 	width: 100%;
@@ -142,18 +137,11 @@ li {
 	text-decoration: underline;
 }
 .brands{
-	width: 1000px;
-	height: 225px;
-	margin-left: 200px;
-
-}
-.brands > ul > li{
-	margin-right: 60px;
+	width: 100%;
+	height: 260px;
 }
 .group{
-    width: 1000px;
     height: auto;
-    margin-left: 200px;
 	margin-bottom: 30px;
 }
 .group h1{
@@ -170,6 +158,11 @@ li {
 	text-align: center;
 	padding: 3px 15px;
 	box-sizing: border-box;
+}
+
+.group table>tbody>tr:first-child{
+	font-weight: 600;
+	color: black;
 }
 .group table>tbody>tr>td{
 	border: 1px solid #7f7f7f;
@@ -190,11 +183,6 @@ footer {
     overflow: hidden;
     height: 100%;
     display: inline-block;
-}
-.footer-content-main{
-	min-width: 300px;
-	max-width: 1000px;
-	margin: 0 auto;
 }
 h3, h4, .footer-phone{
 	color: #fff;
@@ -234,4 +222,28 @@ h3, h4, .footer-phone{
 	color: #fff;
 	margin: 10px 0 -25px 0px;
 	font-size: 12px;
+}
+.photo-intercom, .photo-observ{
+	width: 328px;
+	height: 225px;
+	margin-right: 5px;
+}
+.photo-brands {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.brands > ul> li{
+	width: 167px;
+}
+.soc-link>ul>li{
+	margin-right: 10px;
+}
+@media only screen and (max-width: 1200px) {
+	.phone{
+		font-size: 20px;
+	}
+	.email a{
+		padding-right: 15px;
+	}
 }

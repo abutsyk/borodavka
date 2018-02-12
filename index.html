@@ -7,6 +7,7 @@
 	<link href="jquery.bxslider.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="jquery.bxslider.min.js"></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
 </head>
 <body>
 <header>
@@ -16,15 +17,6 @@
 					<a href="index.html"><img src="logo.jpg" alt="logo" class="logo"></a>
 				</div>
 			<div class="top-menu-phone">
-				<div class="top-menu-wrap">
-					<ul class="top-menu">
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Галерея</a></li>
-						<li><a href="#">Блог</a></li>
-						<li><a href="#">Оплата и доставка</a></li>
-						<li><a href="#">Установка</a></li>
-					</ul>
-				</div>
 				<div class="phone">
 					<span itemprop="telephone" class="phone">(093) 031 94 64</span>
                     <span class="vert-line">|</span>
@@ -81,32 +73,34 @@
 </div>
 </header>
 <main>
+	<div class="main-content">
 	<div class="group" id="video">
 		<h1>Видеонаблюдение</h1>
-		<div>
-			<img src="images/work/video/1.jpg" style="width:300px;height: 225px; margin-right: 25px;">
-			<img src="images/work/video/2.jpg" style="width:300px;height: 225px;  margin-right: 25px;">
-			<img src="images/work/video/3.jpg" style="width:300px;height: 225px;">
-			<img src="images/work/video/3.jpg" style="width:300px;height: 225px; margin-right: 25px;">
-			<img src="images/work/video/1.jpg" style="width:300px;height: 225px; margin-right: 25px;">
-			<img src="images/work/video/2.jpg" style="width:300px;height: 225px; ">
+			<div>
+				<img src="images/work/video/1.jpg" class="photo-observ">
+				<img src="images/work/video/2.jpg" class="photo-observ photo-margin">
+				<img src="images/work/video/3.jpg" class="photo-observ photo-margin">
+				<img src="images/work/video/3.jpg" class="photo-observ">
+				<img src="images/work/video/1.jpg" class="photo-observ photo-margin">
+				<img src="images/work/video/2.jpg" class="photo-observ photo-margin">
+			</div>	
+			<div>
 			<p class="text">Мы полностью производим монтаж и установку систем видеонаблюдения по стандартам.
 				Настраиваем удаленный просмотр с мобильных устройств через интернет.
 				Мы консультируем, составляем сметы и выполняем замеры объектов бесплатно.
 				Мы поставляем готовые решения в сфере безопасности от проектирования до монтажа камер видеонаблюдения,
 				охранных систем и контроля доступа для дома, офиса, производства.
 			</p>
-		</div>
-
+			</div>
 	</div>
 	<div class="group" id="domofony">
 		<h1>Домофоны</h1>
-		<img src="images/work/domofon/1.jpg" style="width:300px;height: 225px;margin-right: 25px;">
-		<img src="images/work/domofon/2.png" style="width:300px;height: 225px;margin-right: 25px;">
-		<img src="images/work/domofon/3.jpg" style="width:300px;height: 225px;">
-		<img src="images/work/domofon/3.jpg" style="width:300px;height: 225px;margin-right: 25px;">
-		<img src="images/work/domofon/1.jpg" style="width:300px;height: 225px;margin-right: 25px;">
-		<img src="images/work/domofon/2.png" style="width:300px;height: 225px;">
+		<img src="images/work/domofon/1.jpg" class="photo-intercom">
+		<img src="images/work/domofon/2.png" class="photo-intercom photo-margin">
+		<img src="images/work/domofon/3.jpg" class="photo-intercom photo-margin">
+		<img src="images/work/domofon/3.jpg" class="photo-intercom">
+		<img src="images/work/domofon/1.jpg" class="photo-intercom photo-margin">
+		<img src="images/work/domofon/2.png" class="photo-intercom photo-margin">
 
 	<p class="text">
 		Домофоны давно плотно вошли в нашу жизнь.
@@ -192,19 +186,20 @@
 	<div class="brands" id="brand">
 		<h1>Бренды</h1>
 		<ul>
-			<li><img src="images/brand/dahua.jpg" alt="dahua" title="dahua"></li>
-			<li><img src="images/brand/slinex.jpg"></li>
-			<li><img src="images/brand/atis.jpg"></li>
-			<li><img src="images/brand/hikvision.jpg"></li>
-			<li><img src="images/brand/neolight.jpg"></li>
-			<li><img src="images/brand/tantos.png"></li>
-			<li><img src="images/brand/samsung.png"></li>
-			<li><img src="images/brand/axis.png"></li>
-			<li><img src="images/brand/myers.png"></li>
-			<li><img src="images/brand/odeskabel.png"></li>
-			<li><img src="images/brand/policecam.png"></li>
-			<li><img src="images/brand/policecam.png"></li>
+			<li><img class="photo-brands" src="images/brand/dahua.jpg" alt="dahua" title="dahua"></li>
+			<li><img class="photo-brands" src="images/brand/slinex.jpg"></li>
+			<li><img class="photo-brands" src="images/brand/atis.jpg"></li>
+			<li><img class="photo-brands" src="images/brand/hikvision.jpg"></li>
+			<li><img class="photo-brands" src="images/brand/neolight.jpg"></li>
+			<li><img class="photo-brands" src="images/brand/tantos.png"></li>
+			<li><img class="photo-brands" src="images/brand/samsung.png"></li>
+			<li><img class="photo-brands" src="images/brand/axis.png"></li>
+			<li><img class="photo-brands" src="images/brand/myers.png"></li>
+			<li><img class="photo-brands" src="images/brand/odeskabel.png"></li>
+			<li><img class="photo-brands" src="images/brand/policecam.png"></li>
+			<li><img class="photo-brands" src="images/brand/policecam.png"></li>
 		</ul>
+	</div>
 	</div>
 </main>
 
@@ -242,4 +237,5 @@
 		Разроботка сайта - WebSpace
 	</div>
 </footer>
+</body>
 </html>
