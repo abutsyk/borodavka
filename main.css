@@ -15,7 +15,7 @@ body {
 }
 .header-content, .footer-content-main, .main-content{
 	min-width: 300px;
-	width: 80%;
+	width: 75%;
 	margin: 0 auto;
 }
 ul {
@@ -103,7 +103,7 @@ li {
 	/*position: fixed;*/
 	z-index: 9999;
 	background-color: #fff;
-	width: 80%;
+	width: 75%;
 	margin: 0 auto;
 }
 .header-top-wrap{
