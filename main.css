@@ -14,8 +14,9 @@ body {
 	float: left;
 }
 .header-content, .footer-content-main, .main-content{
+	max-width: 1010px;
 	min-width: 300px;
-	width: 75%;
+	width: 80%;
 	margin: 0 auto;
 }
 ul {
@@ -103,7 +104,7 @@ li {
 	/*position: fixed;*/
 	z-index: 9999;
 	background-color: #fff;
-	width: 75%;
+	width: 80%;
 	margin: 0 auto;
 }
 .header-top-wrap{
@@ -239,11 +240,189 @@ h3, h4, .footer-phone{
 .soc-link>ul>li{
 	margin-right: 10px;
 }
+.scrollup{
+width:40px;
+height:40px;
+opacity:0.3;
+position:fixed;
+bottom:50px;
+right:25px;
+display:none;
+text-indent:-9999px;
+background: url('icon_top.png') no-repeat;
+}
 @media only screen and (max-width: 1200px) {
 	.phone{
 		font-size: 20px;
 	}
 	.email a{
+		padding-right: 150px;
+	}
+	.vert-line{
+		font-size: 26px;
+	}
+}
+@media only screen and (max-width: 1100px) {
+	.phone{
+		font-size: 20px;
+	}
+	.email a{
 		padding-right: 15px;
+	}
+	.vert-line{
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.phone{
+		font-size: 20px;
+	}
+	.email a{
+		font-size: 18px;
+		padding-right: 25px;
+	}
+	.vert-line{
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.phone{
+		font-size: 14px;
+		padding-top: 40px; 
+	}
+	.email a{
+		font-size: 13px;
+		padding-right: 100px;
+	}
+	.vert-line{
+		font-size: 20px;
+	}
+	.brands {
+		height: 350px;
+	}
+	.soc-link>ul>li{
+	margin-right: 23px;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.phone{
+		font-size: 13px;
+	}
+	.email a{
+		font-size: 13px;
+		padding-right: 45px;
+	}
+	.vert-line{
+		font-size: 20px;
+	}
+	.soc-link>ul>li{
+	margin-right: 16px;
+	}
+	.footer-phone {
+		font-size: 15px;
+	}
+	.footer-content-mid{
+		margin-bottom: 30px;
+	}
+	.h3 {
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 15px;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.phone{
+		font-size: 10px;
+	}
+	.email a{
+		font-size: 9px;
+		padding-right: 120px;
+	}
+	.vert-line{
+		font-size: 12px;
+	}
+	.soc-link>ul>li{
+	margin-right: 15px;
+	}
+	.footer-phone {
+		font-size: 13px;
+	}
+	.footer-content-mid{
+		margin-bottom: 50px;
+	}
+	.h3 {
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 15px;
+	}
+	.footer-content-right{
+		margin-bottom: 30px;
+	}
+	.brands {
+		height: 500px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.phone{
+		font-size: 12px;
+	}
+	.email a{
+		font-size: 13px;
+		padding-right: 45px;
+	}
+	.vert-line{
+		font-size: 20px;
+	}
+	.soc-link>ul>li{
+	margin-right: 3px;
+	}
+	.brands {
+		height: 500px;
+	}
+	.h3 {
+		font-size: 14px;
+	}
+	h4 {
+		font-size: 11px;
+	}
+	.footer-phone {
+		font-size: 10px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.phone{
+		font-size: 14px;
+	}
+	.email a{
+		font-size: 13px;
+		padding-right: 45px;
+	}
+	.vert-line{
+		font-size: 20px;
+	}
+	.soc-link>ul>li{
+	margin-right: 3px;
+	}.h3 {
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 15px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.phone{
+		font-size: 14px;
+	}
+	.email a{
+		font-size: 13px;
+		padding-right: 45px;
+	}
+	.vert-line{
+		font-size: 20px;
+	}
+	.soc-link>ul>li{
+	margin-right: 3px;
 	}
 }

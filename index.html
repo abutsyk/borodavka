@@ -7,9 +7,27 @@
 	<link href="jquery.bxslider.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="jquery.bxslider.min.js"></script>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
+<script type="text/javascript">
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>				
 <header>
 		<div class="header-top-wrap">
 	<div class="header-top">
@@ -206,7 +224,7 @@
 
 
 
-</body>
+<a href="#" class="scrollup">Наверх</a>
 <footer>
     <div class="footer-content-main">
         <div class="h3">
