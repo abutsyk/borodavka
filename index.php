@@ -7,7 +7,7 @@
 	<link href="jquery.bxslider.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="jquery.bxslider.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
 </head>
 <body>
 <script type="text/javascript">
@@ -27,12 +27,14 @@ return false;
 });
  
 });
-</script>				
+</script>
+<?php require_once 'mysql.php';?>
+
 <header>
 		<div class="header-top-wrap">
 	<div class="header-top">
 				<div class="logo-image">
-					<a href="index.html"><img src="logo.jpg" alt="logo" class="logo"></a>
+					<a href="index.php"><img src="logo.jpg" alt="logo" class="logo"></a>
 				</div>
 			<div class="top-menu-phone">
 				<div class="phone">
@@ -52,17 +54,21 @@ return false;
 		<div class="header-bottom">
 						<div class="left-menu-title">
 							<span class="left-menu grad">Все услуги</span>
+                            <?php
+                            $categories = array();
+                            if ($result = $mysqli->query('SELECT * FROM category')) {
+                            while($tmp = $result->fetch_assoc()) {
+                            $categories[] = $tmp;
+                            }
+                            $result->close();
+                            }?>
 							<div class="sidebar">
 								<ul>
-									<li>
-										<a href="index.html#video">Видеонаблюдение</a>
-									</li>
-									<li>
-										<a href="index.html#domofony">Домофоны</a>
-									</li>
-									<li>
-										<a href="#">Компьютеры</a>
-									</li>
+                                    <?php foreach ($categories as $categoryItem): ?>
+                                        <li>
+                                            <a href="index.php#<?php echo $categoryItem['url'];?>"><?php echo $categoryItem['name'];?></a>
+                                        </li>
+                                    <?php endforeach; ?>
 									<li>
 										<a href="#">Контроль доступ</a>
 									</li>
@@ -73,7 +79,7 @@ return false;
 										<a href="#">Удаленка</a>
 									</li>
 									<li>
-										<a href="index.html#brand">Бренды</a>
+										<a href="index.php#brand">Бренды</a>
 									</li>
 								</ul>
 							</div>
@@ -113,12 +119,13 @@ return false;
 	</div>
 	<div class="group" id="domofony">
 		<h1>Домофоны</h1>
+
 		<img src="images/work/domofon/1.jpg" class="photo-intercom">
-		<img src="images/work/domofon/2.png" class="photo-intercom photo-margin">
-		<img src="images/work/domofon/3.jpg" class="photo-intercom photo-margin">
+		<img src="images/work/domofon/2.png" class="photo-intercom">
 		<img src="images/work/domofon/3.jpg" class="photo-intercom">
-		<img src="images/work/domofon/1.jpg" class="photo-intercom photo-margin">
-		<img src="images/work/domofon/2.png" class="photo-intercom photo-margin">
+		<img src="images/work/domofon/3.jpg" class="photo-intercom">
+		<img src="images/work/domofon/1.jpg" class="photo-intercom">
+		<img src="images/work/domofon/2.png" class="photo-intercom">
 
 	<p class="text">
 		Домофоны давно плотно вошли в нашу жизнь.

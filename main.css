@@ -99,12 +99,13 @@ li {
 }
 .slider {
 	margin-left: 265px;
+	min-height: 280px;
 }
 .header-top{
 	/*position: fixed;*/
 	z-index: 9999;
 	background-color: #fff;
-	width: 80%;
+	width: 75%;
 	margin: 0 auto;
 }
 .header-top-wrap{
@@ -117,7 +118,7 @@ li {
 	margin-left: 5px;
 }
 .sidebar{
-	height: 280px;
+	min-height: 280px;
 	width: 260px;
 	margin: 15px -20px;
 	box-shadow: rgb(206, 206, 206) 0px 0px 10px;
@@ -176,7 +177,7 @@ footer {
 	padding: 40px 0;
 }
 .footer-content-right, .footer-content-mid, .footer-content-left{
-	width: 25%;
+	width: 28%;
     position: relative;
     padding: 15px;
     padding-top: 10px;
@@ -245,8 +246,8 @@ width:40px;
 height:40px;
 opacity:0.3;
 position:fixed;
-bottom:50px;
-right:25px;
+bottom:200px;
+right:55px;
 display:none;
 text-indent:-9999px;
 background: url('icon_top.png') no-repeat;
