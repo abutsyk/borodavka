@@ -143,7 +143,12 @@ li {
     height: 675px;
 }
 .photo-intercom, .photo-observ{
-    width: 328px;
+    width: 500px;
+    height: 415px;
+    margin-right: 5px;
+}
+.photo-gallery{
+    width: 325px;
     height: 225px;
     margin-right: 5px;
 }

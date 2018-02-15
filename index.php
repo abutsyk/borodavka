@@ -69,28 +69,30 @@ return false;
                                             <a href="index.php#<?php echo $categoryItem['url'];?>"><?php echo $categoryItem['name'];?></a>
                                         </li>
                                     <?php endforeach; ?>
-									<li>
-										<a href="#">Контроль доступ</a>
-									</li>
-									<li>
-										<a href="#">Сигнализация</a>
-									</li>
-									<li>
-										<a href="#">Удаленка</a>
-									</li>
-									<li>
-										<a href="index.php#brand">Бренды</a>
-									</li>
+                                        <li>
+                                            <a href="index.php#brand">Бренды</a>
+                                        </li>
+
 								</ul>
 							</div>
 						</div>
 						<div class="slider">
 							<script src="slider.js"></script>
+
                             <ul class="bxslider">
-                                   <li><img src="images/slider/photo11.jpg" alt="1"></li>
-                                   <li><img src="images/slider/photo21.jpg" alt="2"></li>
-                                   <li><img src="images/slider/photo31.jpg" alt="3"></li>
-                                   <!-- <li><img src="images/slider/photo41.jpg" alt="4"></li> -->
+                                <?php
+                                $sliders = array();
+                                if ($result = $mysqli->query('SELECT * FROM slider')) {
+                                    while($tmp = $result->fetch_assoc()) {
+                                        $sliders[] = $tmp;
+                                    }
+                                    $result->close();
+                                }?>
+                                <?php foreach ($sliders as $sliderItem): ?>
+                                   <li>
+                                       <img src="images/slider/<?php echo  $sliderItem['name'];?>" alt="<?php echo  $sliderItem['id'];?>">
+                                   </li>
+                                <?php endforeach; ?>
                             </ul>
 						</div>
 		</div>
@@ -98,116 +100,35 @@ return false;
 </header>
 <main>
 	<div class="main-content">
-	<div class="group" id="video">
-		<h1>Видеонаблюдение</h1>
-			<div>
-				<img src="images/work/video/1.jpg" class="photo-observ">
-				<img src="images/work/video/2.jpg" class="photo-observ photo-margin">
-				<img src="images/work/video/3.jpg" class="photo-observ photo-margin">
-				<img src="images/work/video/3.jpg" class="photo-observ">
-				<img src="images/work/video/1.jpg" class="photo-observ photo-margin">
-				<img src="images/work/video/2.jpg" class="photo-observ photo-margin">
+        <?php
+        $categories = array();
+        if ($result = $mysqli->query('SELECT * FROM category')) {
+            while($tmp = $result->fetch_assoc()) {
+                $categories[] = $tmp;
+            }
+            $result->close();
+        }?>
+        <?php foreach ($categories as $categoryItem): ?>
+        <div class="group" id="<?php echo  $categoryItem['url'];?>">
+		<h1><?php echo  $categoryItem['name'];?></h1>
+
+            <div>
+				<a href="<?php echo  $categoryItem['url'];?>.php">
+                 <img src="images/category/<?php echo  $categoryItem['image'];?>" class="photo-observ">
+                </a>
+<!--				<img src="images/work/video/2.jpg" class="photo-observ photo-margin">-->
+<!--				<img src="images/work/video/3.jpg" class="photo-observ photo-margin">-->
+<!--				<img src="images/work/video/3.jpg" class="photo-observ">-->
+<!--				<img src="images/work/video/1.jpg" class="photo-observ photo-margin">-->
+<!--				<img src="images/work/video/2.jpg" class="photo-observ photo-margin">-->
 			</div>	
-			<div>
-			<p class="text">Мы полностью производим монтаж и установку систем видеонаблюдения по стандартам.
-				Настраиваем удаленный просмотр с мобильных устройств через интернет.
-				Мы консультируем, составляем сметы и выполняем замеры объектов бесплатно.
-				Мы поставляем готовые решения в сфере безопасности от проектирования до монтажа камер видеонаблюдения,
-				охранных систем и контроля доступа для дома, офиса, производства.
-			</p>
+
+            <div>
+			<p class="text"><?php echo  $categoryItem['text'];?></p>
 			</div>
 	</div>
-	<div class="group" id="domofony">
-		<h1>Домофоны</h1>
+        <?php endforeach; ?>
 
-		<img src="images/work/domofon/1.jpg" class="photo-intercom">
-		<img src="images/work/domofon/2.png" class="photo-intercom">
-		<img src="images/work/domofon/3.jpg" class="photo-intercom">
-		<img src="images/work/domofon/3.jpg" class="photo-intercom">
-		<img src="images/work/domofon/1.jpg" class="photo-intercom">
-		<img src="images/work/domofon/2.png" class="photo-intercom">
-
-	<p class="text">
-		Домофоны давно плотно вошли в нашу жизнь.
-		Установка домофона производится практически повсеместно: в многоквартирных домах, коттеджах, предприятиях, и т.д.
-		Своевременное обслуживание домофона является залогом стабильности и долговечности работы домофона.
-		Но тем менее иногда всё же возникают ситуации, в которых необходим срочный ремонт домофона.
-	</p>
-		<table>
-			<tbody>
-			<tr>
-				<th>
-					Комплект
-				</th>
-				<th>
-					Из чего состоит
-				</th>
-				<th>
-					Цена, грн.
-				</th>
-				<th>
-					Гарантия, мес.
-				</th>
-			</tr>
-			<tr>
-				<td>
-					Домофон (монитор 4″) с установкой
-				</td>
-				<td>
-					Видеодомофон с TFT монитором 4″, функция открывание замка с панели, антивандальная вызывная панель
-				</td>
-				<td>
-					3900
-				</td>
-				<td>
-					18
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Домофон (монитор 4″) с электромеханическим замком и установкой
-				</td>
-				<td>
-					Видеодомофон с TFT монитором 7″, электромеханический замок, антивандальная вызывная панель
-				</td>
-				<td>
-					6200
-				</td>
-				<td>
-					18
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Домофон (монитор 7″) с установкой
-				</td>
-				<td>
-					Видеодомофон с TFT монитором 7″, функция открывание замка с панели, антивандальная вызывная панель
-				</td>
-				<td>
-					4700
-				</td>
-				<td>
-					18
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Домофон (монитор 7″) с электромеханическим замком и установкой
-				</td>
-				<td>
-					Видеодомофон с TFT монитором 7″ , электромеханический замок, антивандальная вызывная панель
-				</td>
-				<td>
-					6750
-				</td>
-				<td>
-					18
-				</td>
-			</tr>
-			</tbody>
-		</table>
-	</div>
 	<div class="brands" id="brand">
 		<h1>Бренды</h1>
 		<ul>
