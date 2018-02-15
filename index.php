@@ -211,18 +211,91 @@ return false;
 	<div class="brands" id="brand">
 		<h1>Бренды</h1>
 		<ul>
-			<li><img class="photo-brands" src="images/brand/dahua.jpg" alt="dahua" title="dahua"></li>
-			<li><img class="photo-brands" src="images/brand/slinex.jpg"></li>
-			<li><img class="photo-brands" src="images/brand/atis.jpg"></li>
-			<li><img class="photo-brands" src="images/brand/hikvision.jpg"></li>
-			<li><img class="photo-brands" src="images/brand/neolight.jpg"></li>
-			<li><img class="photo-brands" src="images/brand/tantos.png"></li>
-			<li><img class="photo-brands" src="images/brand/samsung.png"></li>
-			<li><img class="photo-brands" src="images/brand/axis.png"></li>
-			<li><img class="photo-brands" src="images/brand/myers.png"></li>
-			<li><img class="photo-brands" src="images/brand/odeskabel.png"></li>
-			<li><img class="photo-brands" src="images/brand/policecam.png"></li>
-			<li><img class="photo-brands" src="images/brand/policecam.png"></li>
+			<li>
+                <a><img class="photo-brands" src="images/brand/ajax.jpg" alt="dahua" title="dahua"></a>
+            </li>
+			<li>
+               <a> <img class="photo-brands" src="images/brand/arny.png"></a>
+            </li>
+
+			<li>
+                <a><img class="photo-brands" src="images/brand/atis.png"></a>
+            </li>
+			<li>
+                <a> <img class="photo-brands" src="images/brand/commax.jpg"></a>
+            </li>
+			<li>
+                <a> <img class="photo-brands" src="images/brand/dahua.gif"></a>
+            </li>
+			<li>
+                <a> <img class="photo-brands" src="images/brand/eltis.jpg"></a>
+            </li>
+			<li>
+                <a><img class="photo-brands" src="images/brand/finmark.jpg"></a>
+            </li>
+			<li>
+                <a>  <img class="photo-brands" src="images/brand/fullenergy.png"></a>
+            </li>
+			<li>
+                <a><img class="photo-brands" src="images/brand/gardi.jpg"></a>
+            </li>
+			<li>
+                <a> <img class="photo-brands" src="images/brand/geze.gif"></a>
+            </li>
+			<li>
+                <a> <img class="photo-brands" src="images/brand/hikvision.jpg"></a>
+            </li>
+			<li>
+                <a> <img class="photo-brands" src="images/brand/infinity.jpg"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/ironlogic.jpg"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/kocom.gif"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/neolight.png"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/odeskabel.jpg"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/policecam.png"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/satel.jpg"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/seagate.jpg"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/slinex.jpg"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/tamron.jpg"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/tantos.png"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/tecsar.png"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/twist.png"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/visit.jpg"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/western.jpg"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/yli.png"></a>
+            </li>
+            <li>
+                <a> <img class="photo-brands" src="images/brand/zben.jpg"></a>
+            </li>
 		</ul>
 	</div>
 	</div>
