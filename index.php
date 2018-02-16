@@ -31,26 +31,24 @@ return false;
 <?php require_once 'mysql.php';?>
 
 <header>
-		<div class="header-top-wrap">
-	<div class="header-top">
-				<div class="logo-image">
-					<a href="index.php"><img src="logo.jpg" alt="logo" class="logo"></a>
-				</div>
-			<div class="top-menu-phone">
-				<div class="phone">
-					<span itemprop="telephone" class="phone">(093) 031 94 64</span>
-                    <span class="vert-line">|</span>
-                    <span itemprop="telephone" class="phone">(093) 031 94 64</span>
-                    <span class="vert-line">|</span>
-                    <span itemprop="telephone" class="phone">(093) 031 94 64</span>
-				</div>
-				<div class="email">
-					<a>butsyk1@gmail.com</a>
-				</div>
-		</div>
-		</div>
-	</div>
 		<div class="header-content">
+        <div class="header-top">
+                <div class="logo-image">
+                    <a href="index.php"><img src="images/logo.jpg" alt="logo" class="logo"></a>
+                </div>
+            <div class="top-menu-phone">
+                <div class="phone">
+                    <span itemprop="telephone" class="phone">(093) 031 94 64</span>
+                    <span class="vert-line">|</span>
+                    <span itemprop="telephone" class="phone">(093) 031 94 64</span>
+                    <span class="vert-line">|</span>
+                    <span itemprop="telephone" class="phone">(093) 031 94 64</span>
+                </div>
+                <div class="email">
+                    <a>butsyk1@gmail.com</a>
+                </div>
+        </div>
+        </div>
 		<div class="header-bottom">
 						<div class="left-menu-title">
 							<span class="left-menu grad">Все услуги</span>

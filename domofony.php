@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <title>Setup</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="jquery.bxslider.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>-->
+    <script type="text/javascript" src="js/my_scripts.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>-->
+    <script type="text/javascript" src="js/my_scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="jquery.bxslider.min.js"></script>
+    <link href="fotorama.css" rel="stylesheet">
+    <script src="fotorama.js"></script>
     <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
 </head>
 <body>
@@ -31,10 +36,10 @@
 <?php require_once 'mysql.php';?>
 
 <header>
-    <div class="header-top-wrap">
+    <div class="header-content">
         <div class="header-top">
             <div class="logo-image">
-                <a href="index.php"><img src="logo.jpg" alt="logo" class="logo"></a>
+                <a href="index.php"><img src="images/logo.jpg" alt="logo" class="logo"></a>
             </div>
             <div class="top-menu-phone">
                 <div class="phone">
@@ -50,67 +55,41 @@
             </div>
         </div>
     </div>
-<!--    <div class="header-content">-->
-<!--        <div class="header-bottom">-->
-<!--            <div class="left-menu-title">-->
-<!--                <span class="left-menu grad">Все услуги</span>-->
-<!--                --><?php
-//                $categories = array();
-//                if ($result = $mysqli->query('SELECT * FROM category')) {
-//                    while($tmp = $result->fetch_assoc()) {
-//                        $categories[] = $tmp;
-//                    }
-//                    $result->close();
-//                }?>
-<!--                <div class="sidebar">-->
-<!--                    <ul>-->
-<!--                        --><?php //foreach ($categories as $categoryItem): ?>
-<!--                            <li>-->
-<!--                                <a href="index.php#--><?php //echo $categoryItem['url'];?><!--">--><?php //echo $categoryItem['name'];?><!--</a>-->
-<!--                            </li>-->
-<!--                        --><?php //endforeach; ?>
-<!--                        <li>-->
-<!--                            <a href="index.php#brand">Бренды</a>-->
-<!--                        </li>-->
-<!---->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="slider">-->
-<!--                <script src="slider.js"></script>-->
-<!---->
-<!--                <ul class="bxslider">-->
-<!--                    --><?php
-//                    $sliders = array();
-//                    if ($result = $mysqli->query('SELECT * FROM slider')) {
-//                        while($tmp = $result->fetch_assoc()) {
-//                            $sliders[] = $tmp;
-//                        }
-//                        $result->close();
-//                    }?>
-<!--                    --><?php //foreach ($sliders as $sliderItem): ?>
-<!--                        <li>-->
-<!--                            <img src="images/slider/--><?php //echo  $sliderItem['name'];?><!--" alt="--><?php //echo  $sliderItem['id'];?><!--">-->
-<!--                        </li>-->
-<!--                    --><?php //endforeach; ?>
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
 </header>
 <main>
     <div class="main-content">
- <div class="group" id="domofony">
-           <div class="crumbs">
-               <a href="index.php">Главная</a>
-           </div>
+ <div class="group-main" id="domofony">
             <h1>Домофоны</h1>
-     <img src="images/work/domofon/1.jpg" class="photo-gallery">
- <img src="images/work/domofon/1.jpg" class="photo-gallery">
-     <img src="images/work/domofon/1.jpg" class="photo-gallery">
-     <img src="images/work/domofon/1.jpg" class="photo-gallery">
-     <img src="images/work/domofon/1.jpg" class="photo-gallery">
-     <img src="images/work/domofon/1.jpg" class="photo-gallery">
+     
+            <div class="link_group">
+        <a class="show_popup" rel="photo_win" href="#">
+            <img src="images/work/domofon/1.jpg" alt="" class="photo-gallery">
+            <img src="images/work/domofon/3.jpg" alt="" class="photo-gallery">
+            <img src="images/work/domofon/1.jpg" alt="" class="photo-gallery">
+            <img src="images/work/domofon/3.jpg" alt="" class="photo-gallery">
+            <img src="images/work/domofon/1.jpg" alt="" class="photo-gallery">
+            <img src="images/work/domofon/3.jpg" alt="" class="photo-gallery">
+        </a>
+    </div>
+    <div class="popup photo_win">
+        <a class="close" href="#">Close</a>
+        <div class="img_wrap">
+            <div class="fotorama" data-navposition="bot" data-nav="thumbs" data-loop="true">
+                    <div data-img="images/work/domofon/dom22.jpg" class="descr">Some description1</div>
+                    <div data-img="images/work/domofon/dom1.jpg" class="descr">Some description2</div>
+                    <div data-img="images/work/domofon/dom3.jpg" class="descr">Some description3</div>
+                    <div data-img="images/work/domofon/dom4.jpg" class="descr">Some description4</div>
+                    <div data-img="images/work/domofon/dom3.jpg" class="descr">Some description5</div>                
+                    <div data-img="images/work/domofon/1.jpg" class="descr">Some description6</div>
+            </div>    
+
+        </div>
+    </div>
+
+
+
+
+
 
             <table>
                 <tbody>
