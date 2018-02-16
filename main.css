@@ -263,13 +263,12 @@ h3, h4, .footer-phone{
 .scrollup{
     width:40px;
     height:40px;
-    opacity:0.5;
     position:fixed;
     bottom:200px;
     right:55px;
     display:none;
     text-indent:-9999px;
-    background: url('icon_top.png') no-repeat;
+    background: url('images/icon_top.png') no-repeat;
 }
 .group-main{
 	height: auto;
