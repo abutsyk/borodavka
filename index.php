@@ -40,7 +40,7 @@ return false;
 				<div class="phone">
 					<span itemprop="telephone" class="phone">(093) 031 94 64</span>
                     <span class="vert-line">|</span>
-                    <span itemprop="telephone" class="phone">(044) 591 10 90</span>
+                    <span itemprop="telephone" class="phone">(093) 031 94 64</span>
                     <span class="vert-line">|</span>
                     <span itemprop="telephone" class="phone">(093) 031 94 64</span>
 				</div>
@@ -109,24 +109,19 @@ return false;
             $result->close();
         }?>
         <?php foreach ($categories as $categoryItem): ?>
+
         <div class="group" id="<?php echo  $categoryItem['url'];?>">
 		<h1><?php echo  $categoryItem['name'];?></h1>
 
             <div>
-				<a href="<?php echo  $categoryItem['url'];?>.php">
+				<a class="image" href="<?php echo  $categoryItem['url'];?>.php">
                  <img src="images/category/<?php echo  $categoryItem['image'];?>" class="photo-observ">
                 </a>
-<!--				<img src="images/work/video/2.jpg" class="photo-observ photo-margin">-->
-<!--				<img src="images/work/video/3.jpg" class="photo-observ photo-margin">-->
-<!--				<img src="images/work/video/3.jpg" class="photo-observ">-->
-<!--				<img src="images/work/video/1.jpg" class="photo-observ photo-margin">-->
-<!--				<img src="images/work/video/2.jpg" class="photo-observ photo-margin">-->
-			</div>	
-
-            <div>
-			<p class="text"><?php echo  $categoryItem['text'];?></p>
-			</div>
-	</div>
+            	<p class="text"><?php echo  $categoryItem['text'];?>
+                <br><a href="<?php echo  $categoryItem['url'];?>.php">
+                        <strong style="padding: 20px;display: block;">Посмотреть подробнее...</strong></a></p>
+            </div>
+        </div>
         <?php endforeach; ?>
 
 	<div class="brands" id="brand">
