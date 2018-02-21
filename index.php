@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Setup</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link href="jquery.bxslider.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="js/jquery.bxslider.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="jquery.bxslider.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
 <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
 </head>
 <body>
@@ -68,14 +68,13 @@ return false;
                                         </li>
                                     <?php endforeach; ?>
                                         <li>
-                                            <a href="index.php#brand">Бренды</a>
+                                            <a href="pages/programs.php">Скачать ПО</a>
                                         </li>
-
-								</ul>
+                                 </ul>
 							</div>
 						</div>
 						<div class="slider">
-							<script src="slider.js"></script>
+							<script src="js/slider.js"></script>
 
                             <ul class="bxslider">
                                 <?php
@@ -116,13 +115,13 @@ return false;
                  <img src="images/category/<?php echo  $categoryItem['image'];?>" class="photo-observ">
                 </a>
             	<p class="text"><?php echo  $categoryItem['text'];?>
-                <br><a href="<?php echo  $categoryItem['url'];?>.php">
+                <br><a href="pages/<?php echo  $categoryItem['url'];?>.php">
                         <strong style="padding: 20px;display: block;">Посмотреть подробнее...</strong></a></p>
             </div>
         </div>
         <?php endforeach; ?>
 
-	<div class="brands" id="brand">
+	<div class="brands">
 		<h1>Бренды</h1>
 		<ul>
 			<li>

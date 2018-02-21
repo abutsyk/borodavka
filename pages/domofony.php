@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Setup</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<!--<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>-->
-    <script type="text/javascript" src="js/my_scripts.js"></script>
-<!--<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>-->
-    <script type="text/javascript" src="js/my_scripts.js"></script>
+    <script type="text/javascript" src="../js/my_scripts.js"></script>
+    <script type="text/javascript" src="../js/my_scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link href="fotorama.css" rel="stylesheet">
-    <script src="fotorama.js"></script>
-    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    <link href="../css/fotorama.css" rel="stylesheet">
+    <script src="../js/fotorama.js"></script>
 </head>
 <body>
 <script type="text/javascript">
@@ -33,13 +30,13 @@
 
     });
 </script>
-<?php require_once 'mysql.php';?>
+<?php include_once  '../mysql.php';?>
 
 <header>
     <div class="header-content">
         <div class="header-top">
             <div class="logo-image">
-                <a href="index.php"><img src="images/logo.jpg" alt="logo" class="logo"></a>
+                <a href="../index.php"><img src="../images/logo.jpg" alt="logo" class="logo"></a>
             </div>
             <div class="top-menu-phone">
                 <div class="phone">
@@ -63,12 +60,12 @@
      
             <div class="link_group">
         <a class="show_popup" rel="photo_win" href="#">
-            <img src="images/work/domofon/1.jpg" alt="" class="photo-gallery">
-            <img src="images/work/domofon/3.jpg" alt="" class="photo-gallery">
-            <img src="images/work/domofon/1.jpg" alt="" class="photo-gallery">
-            <img src="images/work/domofon/3.jpg" alt="" class="photo-gallery">
-            <img src="images/work/domofon/1.jpg" alt="" class="photo-gallery">
-            <img src="images/work/domofon/3.jpg" alt="" class="photo-gallery">
+            <img src="../images/work/domofon/dom1.jpg" alt="" class="photo-gallery">
+            <img src="../images/work/domofon/3.jpg" alt="" class="photo-gallery">
+            <img src="../images/work/domofon/1.jpg" alt="" class="photo-gallery">
+            <img src="../images/work/domofon/dom4.jpg" alt="" class="photo-gallery">
+            <img src="../images/work/domofon/1.jpg" alt="" class="photo-gallery">
+            <img src="../images/work/domofon/3.jpg" alt="" class="photo-gallery">
         </a>
     </div>
     <div class="popup photo_win">
@@ -170,89 +167,89 @@
             <h1>Бренды</h1>
             <ul>
                 <li>
-                    <a><img class="photo-brands" src="images/brand/ajax.jpg" alt="dahua" title="dahua"></a>
+                    <a><img class="photo-brands" src="../images/brand/ajax.jpg" alt="dahua" title="dahua"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/arny.png"></a>
+                    <a> <img class="photo-brands" src="../images/brand/arny.png"></a>
                 </li>
 
                 <li>
-                    <a><img class="photo-brands" src="images/brand/atis.png"></a>
+                    <a><img class="photo-brands" src="../images/brand/atis.png"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/commax.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/commax.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/dahua.gif"></a>
+                    <a> <img class="photo-brands" src="../images/brand/dahua.gif"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/eltis.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/eltis.jpg"></a>
                 </li>
                 <li>
-                    <a><img class="photo-brands" src="images/brand/finmark.jpg"></a>
+                    <a><img class="photo-brands" src="../images/brand/finmark.jpg"></a>
                 </li>
                 <li>
-                    <a>  <img class="photo-brands" src="images/brand/fullenergy.png"></a>
+                    <a>  <img class="photo-brands" src="../images/brand/fullenergy.png"></a>
                 </li>
                 <li>
-                    <a><img class="photo-brands" src="images/brand/gardi.jpg"></a>
+                    <a><img class="photo-brands" src="../images/brand/gardi.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/geze.gif"></a>
+                    <a> <img class="photo-brands" src="../images/brand/geze.gif"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/hikvision.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/hikvision.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/infinity.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/infinity.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/ironlogic.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/ironlogic.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/kocom.gif"></a>
+                    <a> <img class="photo-brands" src="../images/brand/kocom.gif"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/neolight.png"></a>
+                    <a> <img class="photo-brands" src="../images/brand/neolight.png"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/odeskabel.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/odeskabel.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/policecam.png"></a>
+                    <a> <img class="photo-brands" src="../images/brand/policecam.png"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/satel.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/satel.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/seagate.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/seagate.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/slinex.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/slinex.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/tamron.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/tamron.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/tantos.png"></a>
+                    <a> <img class="photo-brands" src="../images/brand/tantos.png"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/tecsar.png"></a>
+                    <a> <img class="photo-brands" src="../images/brand/tecsar.png"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/twist.png"></a>
+                    <a> <img class="photo-brands" src="../images/brand/twist.png"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/visit.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/visit.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/western.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/western.jpg"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/yli.png"></a>
+                    <a> <img class="photo-brands" src="../images/brand/yli.png"></a>
                 </li>
                 <li>
-                    <a> <img class="photo-brands" src="images/brand/zben.jpg"></a>
+                    <a> <img class="photo-brands" src="../images/brand/zben.jpg"></a>
                 </li>
             </ul>
         </div>
