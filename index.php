@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Setup</title>
+	<title>Setup-системы безопасности</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href="js/jquery.bxslider.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -111,7 +111,7 @@ return false;
 		<h1><?php echo  $categoryItem['name'];?></h1>
 
             <div>
-				<a class="image" href="<?php echo  $categoryItem['url'];?>.php">
+				<a class="image" href="pages/<?php echo  $categoryItem['url'];?>.php">
                  <img src="images/category/<?php echo  $categoryItem['image'];?>" class="photo-observ">
                 </a>
             	<p class="text"><?php echo  $categoryItem['text'];?>
@@ -124,91 +124,21 @@ return false;
 	<div class="brands">
 		<h1>Бренды</h1>
 		<ul>
-			<li>
-                <a><img class="photo-brands" src="images/brand/ajax.jpg" alt="dahua" title="dahua"></a>
-            </li>
-			<li>
-               <a> <img class="photo-brands" src="images/brand/arny.png"></a>
-            </li>
+            <?php
+        $categories = array();
+        if ($result = $mysqli->query('SELECT * FROM brands')) {
+            while($tmp = $result->fetch_assoc()) {
+                $categories[] = $tmp;
+            }
+            $result->close();
+        }?>
+        <?php foreach ($categories as $categoryItem): ?>
 
 			<li>
-                <a><img class="photo-brands" src="images/brand/atis.png"></a>
+                <a><img class="photo-brands" src="images/brand/<?php echo  $categoryItem['image'];?>"></a>
             </li>
-			<li>
-                <a> <img class="photo-brands" src="images/brand/commax.jpg"></a>
-            </li>
-			<li>
-                <a> <img class="photo-brands" src="images/brand/dahua.gif"></a>
-            </li>
-			<li>
-                <a> <img class="photo-brands" src="images/brand/eltis.jpg"></a>
-            </li>
-			<li>
-                <a><img class="photo-brands" src="images/brand/finmark.jpg"></a>
-            </li>
-			<li>
-                <a>  <img class="photo-brands" src="images/brand/fullenergy.png"></a>
-            </li>
-			<li>
-                <a><img class="photo-brands" src="images/brand/gardi.jpg"></a>
-            </li>
-			<li>
-                <a> <img class="photo-brands" src="images/brand/geze.gif"></a>
-            </li>
-			<li>
-                <a> <img class="photo-brands" src="images/brand/hikvision.jpg"></a>
-            </li>
-			<li>
-                <a> <img class="photo-brands" src="images/brand/infinity.jpg"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/ironlogic.jpg"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/kocom.gif"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/neolight.png"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/odeskabel.jpg"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/policecam.png"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/satel.jpg"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/seagate.jpg"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/slinex.jpg"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/tamron.jpg"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/tantos.png"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/tecsar.png"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/twist.png"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/visit.jpg"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/western.jpg"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/yli.png"></a>
-            </li>
-            <li>
-                <a> <img class="photo-brands" src="images/brand/zben.jpg"></a>
-            </li>
+
+            <?php endforeach; ?>
 		</ul>
 	</div>
 	</div>

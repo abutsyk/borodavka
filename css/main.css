@@ -53,7 +53,7 @@ li {
 	color: #fff;
 }
 .left-menu-title {
-	width: 260px;
+	width: 100%;
 	margin-top: 18px;
 	height: 45px;
 	padding: 0 20px;
@@ -102,6 +102,7 @@ li {
 }
 .slider {
 	margin-left: 265px;
+	margin-top: 44px;
 	min-height: 280px;
 }
 .header-top{

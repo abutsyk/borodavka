@@ -1,15 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Setup</title>
+    <title>Setup-системы безопасности</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/my_scripts.js"></script>
-    <script type="text/javascript" src="../js/my_scripts.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link href="../css/fotorama.css" rel="stylesheet">
-    <script src="../js/fotorama.js"></script>
+
+<!--   SLIDER -->
+    <link rel="stylesheet" href="../slider/css/smoothbox.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script type="text/javascript" src="../slider/js/smoothbox.min.js"></script>
+<!--   -->
+
 </head>
 <body>
 <script type="text/javascript">
@@ -42,7 +43,7 @@
                 <div class="phone">
                     <span itemprop="telephone" class="phone">(093) 031 94 64</span>
                     <span class="vert-line">|</span>
-                    <span itemprop="telephone" class="phone">(044) 591 10 90</span>
+                    <span itemprop="telephone" class="phone">(093) 031 94 64</span>
                     <span class="vert-line">|</span>
                     <span itemprop="telephone" class="phone">(093) 031 94 64</span>
                 </div>
@@ -56,53 +57,49 @@
 <main>
     <div class="main-content">
  <div class="group-main" id="domofony">
-            <h1>Домофоны</h1>
-     
-            <div class="link_group">
-        <a class="show_popup" rel="photo_win" href="#">
-            <img src="../images/work/domofon/dom1.jpg" alt="" class="photo-gallery">
-            <img src="../images/work/domofon/3.jpg" alt="" class="photo-gallery">
-            <img src="../images/work/domofon/1.jpg" alt="" class="photo-gallery">
-            <img src="../images/work/domofon/dom4.jpg" alt="" class="photo-gallery">
-            <img src="../images/work/domofon/1.jpg" alt="" class="photo-gallery">
-            <img src="../images/work/domofon/3.jpg" alt="" class="photo-gallery">
-        </a>
-    </div>
-    <div class="popup photo_win">
-        <a class="close" href="#">Close</a>
-        <div class="img_wrap">
-            <div class="fotorama" data-navposition="bot" data-nav="thumbs" data-loop="true">
-                    <div data-img="images/work/domofon/dom22.jpg" class="descr">Some description1</div>
-                    <div data-img="images/work/domofon/dom1.jpg" class="descr">Some description2</div>
-                    <div data-img="images/work/domofon/dom3.jpg" class="descr">Some description3</div>
-                    <div data-img="images/work/domofon/dom4.jpg" class="descr">Some description4</div>
-                    <div data-img="images/work/domofon/dom3.jpg" class="descr">Some description5</div>                
-                    <div data-img="images/work/domofon/1.jpg" class="descr">Some description6</div>
-            </div>    
+     <h1>Наши работы</h1>
 
-        </div>
+    <div class="image-g">
+         <li class="sb-li">
+             <a class="sb" title="Рабочие моменты" href="../images/work/domofon/dom2.jpg">
+                 <img class="sb-img" src="../images/work/domofon/dom2.jpg" >
+             </a>
+         </li>
+         <li class="sb-li">
+             <a class="sb" href="../images/work/domofon/dom1.jpg" title="Hey here's a caption">
+                 <img class="sb-img" src="../images/work/domofon/dom1.jpg" >
+             </a>
+         </li>
+         <li class="sb-li">
+             <a class="sb" href="../images/work/domofon/dom4.jpg" title="Установка видео наблюдения...Установка видео наблюдения...Установка видео наблюдения...Установка видео наблюдения...">
+                 <img class="sb-img" src="../images/work/domofon/dom4.jpg">
+             </a>
+          </li>
+        <li class="sb-li">
+            <a class="sb" href="../images/work/domofon/dom4.jpg" title="Whoa, another caption. What are the odds of that happening?">
+<!--                <img src="../master/images/2.jpg">-->
+            </a><br>
+        </li>
     </div>
 
 
 
-
-
-
+      <h1>Цены</h1>
             <table>
                 <tbody>
                 <tr>
-                    <th>
+                    <td>
                         Комплект
-                    </th>
-                    <th>
+                    </td>
+                    <td>
                         Из чего состоит
-                    </th>
-                    <th>
+                    </td>
+                    <td>
                         Цена, грн.
-                    </th>
-                    <th>
+                    </td>
+                    <td>
                         Гарантия, мес.
-                    </th>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -162,97 +159,29 @@
                 </tr>
                 </tbody>
             </table>
-        </div>
-        <div class="brands" id="brand">
-            <h1>Бренды</h1>
-            <ul>
-                <li>
-                    <a><img class="photo-brands" src="../images/brand/ajax.jpg" alt="dahua" title="dahua"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/arny.png"></a>
-                </li>
 
-                <li>
-                    <a><img class="photo-brands" src="../images/brand/atis.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/commax.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/dahua.gif"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/eltis.jpg"></a>
-                </li>
-                <li>
-                    <a><img class="photo-brands" src="../images/brand/finmark.jpg"></a>
-                </li>
-                <li>
-                    <a>  <img class="photo-brands" src="../images/brand/fullenergy.png"></a>
-                </li>
-                <li>
-                    <a><img class="photo-brands" src="../images/brand/gardi.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/geze.gif"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/hikvision.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/infinity.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/ironlogic.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/kocom.gif"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/neolight.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/odeskabel.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/policecam.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/satel.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/seagate.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/slinex.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/tamron.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/tantos.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/tecsar.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/twist.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/visit.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/western.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/yli.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/zben.jpg"></a>
-                </li>
-            </ul>
         </div>
+
+       <div class="brands">
+        <h1>Бренды</h1>
+        <ul>
+            <?php
+        $categories = array();
+        if ($result = $mysqli->query('SELECT * FROM brands')) {
+            while($tmp = $result->fetch_assoc()) {
+                $categories[] = $tmp;
+            }
+            $result->close();
+        }?>
+        <?php foreach ($categories as $categoryItem): ?>
+
+            <li>
+                <a><img class="photo-brands" src="../images/brand/<?php echo  $categoryItem['image'];?>"></a>
+            </li>
+
+            <?php endforeach; ?>
+        </ul>
+    </div>
     </div>
 </main>
 

@@ -29,7 +29,7 @@
 
     });
 </script>
-<?php //include 'mysql.php';?>
+<?php include '../mysql.php';?>
 
 <header>
     <div class="header-content">
@@ -56,140 +56,49 @@
     <div class="main-content">
         <div class="programs">
             <h1>Програмное обеспечение</h1>
+                        <?php
+                            $categories = array();
+                            if ($result = $mysqli->query('SELECT * FROM soft')) {
+                            while($tmp = $result->fetch_assoc()) {
+                                 $categories[] = $tmp;
+                                }
+                               $result->close();
+                            }
+                        ?>
              <table>
                 <tbody>
+                    <?php foreach ($categories as $categoryItem): ?>
                 <tr>
                     <td>
-                        Наименование
+                       <?php echo $categoryItem['name'];?>
                     </td>
                     <td>
-                       Ссылка
+                      <?php echo $categoryItem['link'];?>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                         Windows 10
-                    </td>
-                    <td>
-                        <a class="link" href="https://www.microsoft.com/uk-ua/software-download/windows10" target="_blank">https://www.microsoft.com/uk-ua/software-download/windows10</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Office 365
-                    </td>
-                    <td>
-                        <a class="link" href="https://products.office.com/uk-ua/home" target="_blank">https://products.office.com/uk-ua/home</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                         Windows 10
-                    </td>
-                    <td>
-                        <a class="link" href="https://www.microsoft.com/uk-ua/software-download/windows10" target="_blank">https://www.microsoft.com/uk-ua/software-download/windows10</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Office 365
-                    </td>
-                    <td>
-                        <a class="link" href="https://products.office.com/uk-ua/home" target="_blank">https://products.office.com/uk-ua/home</a>
-                    </td>
-                </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
         <div class="brands" id="brand" style="margin-top: 25px;">
             <h1>Бренды</h1>
-            <ul>
-                <li>
-                    <a><img class="photo-brands" src="../images/brand/ajax.jpg" alt="dahua" title="dahua"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/arny.png"></a>
-                </li>
+        <ul>
+            <?php
+        $categories = array();
+        if ($result = $mysqli->query('SELECT * FROM brands')) {
+            while($tmp = $result->fetch_assoc()) {
+                $categories[] = $tmp;
+            }
+            $result->close();
+        }?>
+        <?php foreach ($categories as $categoryItem): ?>
 
-                <li>
-                    <a><img class="photo-brands" src="../images/brand/atis.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/commax.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/dahua.gif"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/eltis.jpg"></a>
-                </li>
-                <li>
-                    <a><img class="photo-brands" src="../images/brand/finmark.jpg"></a>
-                </li>
-                <li>
-                    <a>  <img class="photo-brands" src="../images/brand/fullenergy.png"></a>
-                </li>
-                <li>
-                    <a><img class="photo-brands" src="../images/brand/gardi.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/geze.gif"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/hikvision.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/infinity.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/ironlogic.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/kocom.gif"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/neolight.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/odeskabel.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/policecam.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/satel.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/seagate.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/slinex.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/tamron.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/tantos.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/tecsar.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/twist.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/visit.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/western.jpg"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/yli.png"></a>
-                </li>
-                <li>
-                    <a> <img class="photo-brands" src="../images/brand/zben.jpg"></a>
-                </li>
-            </ul>
+            <li>
+                <a><img class="photo-brands" src="../images/brand/<?php echo  $categoryItem['image'];?>"></a>
+            </li>
+
+            <?php endforeach; ?>
+        </ul>
         </div>
     </div>
 </main>
