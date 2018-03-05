@@ -58,105 +58,53 @@
     <div class="main-content">
  <div class="group-main" id="domofony">
      <h1>Наши работы</h1>
-
+             <?php
+        $categories = array();
+        if ($result = $mysqli->query('SELECT * FROM slider_domofony')) {
+            while($tmp = $result->fetch_assoc()) {
+                $categories[] = $tmp;
+            }
+            $result->close();
+        }?>
     <div class="image-g">
+        <?php foreach ($categories as $categoryItem): ?> 
          <li class="sb-li">
-             <a class="sb" title="Рабочие моменты" href="../images/work/domofon/dom2.jpg">
-                 <img class="sb-img" src="../images/work/domofon/dom2.jpg" >
+             <a class="sb" title="<?php echo $categoryItem['description'];?>" href="../images/work/domofon/<?php echo $categoryItem['href'];?>" style="display: <?php echo $categoryItem['display'];?>;">
+                 <img class="sb-img" src="../images/work/domofon/<?php echo $categoryItem['href'];?>" >
              </a>
          </li>
-         <li class="sb-li">
-             <a class="sb" href="../images/work/domofon/dom1.jpg" title="Hey here's a caption">
-                 <img class="sb-img" src="../images/work/domofon/dom1.jpg" >
-             </a>
-         </li>
-         <li class="sb-li">
-             <a class="sb" href="../images/work/domofon/dom4.jpg" title="Установка видео наблюдения...Установка видео наблюдения...Установка видео наблюдения...Установка видео наблюдения...">
-                 <img class="sb-img" src="../images/work/domofon/dom4.jpg">
-             </a>
-          </li>
-        <li class="sb-li">
-            <a class="sb" href="../images/work/domofon/dom4.jpg" title="Whoa, another caption. What are the odds of that happening?">
-<!--                <img src="../master/images/2.jpg">-->
-            </a><br>
-        </li>
+         <?php endforeach; ?>
     </div>
 
 
 
       <h1>Цены</h1>
+                <?php
+        $categories = array();
+        if ($result = $mysqli->query('SELECT * FROM price_domofony')) {
+            while($tmp = $result->fetch_assoc()) {
+                $categories[] = $tmp;
+            }
+            $result->close();
+        }?>
             <table>
                 <tbody>
+                    <?php foreach ($categories as $categoryItem): ?>  
                 <tr>
                     <td>
-                        Комплект
+                        <?php echo $categoryItem['komplekt'];?>
                     </td>
                     <td>
-                        Из чего состоит
+                        <?php echo $categoryItem['what'];?>
                     </td>
                     <td>
-                        Цена, грн.
+                        <?php echo $categoryItem['price'];?>
                     </td>
                     <td>
-                        Гарантия, мес.
+                        <?php echo $categoryItem['warranty'];?>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        Домофон (монитор 4″) с установкой
-                    </td>
-                    <td>
-                        Видеодомофон с TFT монитором 4″, функция открывание замка с панели, антивандальная вызывная панель
-                    </td>
-                    <td>
-                        3900
-                    </td>
-                    <td>
-                        18
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Домофон (монитор 4″) с электромеханическим замком и установкой
-                    </td>
-                    <td>
-                        Видеодомофон с TFT монитором 7″, электромеханический замок, антивандальная вызывная панель
-                    </td>
-                    <td>
-                        6200
-                    </td>
-                    <td>
-                        18
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Домофон (монитор 7″) с установкой
-                    </td>
-                    <td>
-                        Видеодомофон с TFT монитором 7″, функция открывание замка с панели, антивандальная вызывная панель
-                    </td>
-                    <td>
-                        4700
-                    </td>
-                    <td>
-                        18
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Домофон (монитор 7″) с электромеханическим замком и установкой
-                    </td>
-                    <td>
-                        Видеодомофон с TFT монитором 7″ , электромеханический замок, антивандальная вызывная панель
-                    </td>
-                    <td>
-                        6750
-                    </td>
-                    <td>
-                        18
-                    </td>
-                </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
 
@@ -167,7 +115,7 @@
         <ul>
             <?php
         $categories = array();
-        if ($result = $mysqli->query('SELECT * FROM brands')) {
+        if ($result = $mysqli->query('SELECT * FROM brand')) {
             while($tmp = $result->fetch_assoc()) {
                 $categories[] = $tmp;
             }
