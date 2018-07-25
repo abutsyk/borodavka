@@ -7,10 +7,11 @@
 
 <!--   SLIDER -->
     <link rel="stylesheet" href="../slider/css/smoothbox.css">
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
     <script type="text/javascript" src="../slider/js/smoothbox.min.js"></script>
 <!--   -->
-
+    
 </head>
 <body>
 <script type="text/javascript">
@@ -30,8 +31,8 @@
         });
 
     });
-</script>
-<?php include_once  '../mysql.php';?>
+</script><!-- 
+<?php include_once  '../mysql.php';?> -->
 
 <header>
     <div class="header-content">
@@ -58,26 +59,53 @@
     <div class="main-content">
  <div class="group-main" id="domofony">
      <h1>Наши работы</h1>
-             <?php
-        $categories = array();
-        if ($result = $mysqli->query('SELECT * FROM slider_domofony')) {
-            while($tmp = $result->fetch_assoc()) {
-                $categories[] = $tmp;
-            }
-            $result->close();
-        }?>
-    <div class="image-g">
+              <?php
+                $con = mysqli_connect('localhost','root','','setup');  
+                mysqli_select_db($con,"setup");
+                $result = mysqli_query( $con, "SELECT * FROM slider_domofony" );
+                $num_rows = mysqli_num_rows($result);
+
+
+                        $categories = array();
+                        if ($result = $mysqli->query('SELECT * FROM slider_domofony where id <= 3')) {
+                            while($tmp = $result->fetch_assoc()) {
+                                $categories[] = $tmp;
+                            }
+                            $result->close();
+                        }?>
+    <div>
         <?php foreach ($categories as $categoryItem): ?> 
          <li class="sb-li">
-             <a class="sb" title="<?php echo $categoryItem['description'];?>" href="../images/work/domofon/<?php echo $categoryItem['href'];?>" style="display: <?php echo $categoryItem['display'];?>;">
+             <a class="sb" title="<?php echo $categoryItem['description'];?>" href="../images/work/domofon/<?php echo $categoryItem['href'];?>">
                  <img class="sb-img" src="../images/work/domofon/<?php echo $categoryItem['href'];?>" >
              </a>
          </li>
          <?php endforeach; ?>
+
+         <?php 
+                    $categories = array();
+        if ($result2 = mysqli_query($con, 'SELECT * FROM slider_domofony where id > 3')) {
+                            while($tmp = $result2->fetch_assoc()) {
+                                 $categories[] = $tmp;
+                                }
+                               $result2->close();
+                            }?>
+                <div class="accord" style="display: none; margin: 10px 0 0 0; overflow: inherit;">
+                    
+                        <?php foreach ($categories as $categoryItem):  ?>
+                         <li class="sb-li">
+             <a class="sb" title="<?php echo $categoryItem['description'];?>" href="../images/work/domofon/<?php echo $categoryItem['href'];?>">
+                 <img class="sb-img" src="../images/work/domofon/<?php echo $categoryItem['href'];?>" >
+             </a>
+         </li>
+         <?php endforeach; ?>
+      </div>
+                <div class="button" style="margin-left: 45%; ">
+                    <button id="slidedown" class="button">Показать все</button>
+                </div>
+
+                    <script type="text/javascript" src="../js/main_acc.js"></script>
     </div>
-
-
-
       <h1>Цены</h1>
                 <?php
         $categories = array();
@@ -166,6 +194,12 @@
     <div class="web-pool">
         Разроботка сайта - WebSpace
     </div>
+    <?php if ($num_rows <= 3) {
+    echo '<style type="text/css">.button {
+             display: none;
+        }</style>'; 
+        }   
+ ?>
 </footer>
 </body>
 </html>
